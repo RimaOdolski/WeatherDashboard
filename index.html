@@ -9,27 +9,42 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<style src="style.css"></style>
+<script src="https://kit.fontawesome.com/0a18ee920d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <!-- Heading -->
+    <!-- Header -->
     <div class="bg-dark pt-2 pb-2">
         <div class="container">
             <h1 class= "text-center text-white">Weather Dashboard </h1>
         </div>
     </div>
-    <!-- Searh Bar Container -->
-    <div class="container-fluid">
-        <div class="row">
-            <div classs="col-lg-3 bg-light pt-3 pb-3">
-                <h6> Search for a city:</h6>
-                <div class="input-group mb-3">
-                    <input id="searchCity"  type="text" placeholder="Enter city name here" class="form-control"></input>
-                    <button id ="searchBtn" type="button" class="btn btn-primary"></button>
+    <!--Main Container -->
+    <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="col-lg-3 pt-4 pb-4"> 
+                <h5>Search for a city:</h5>
+                <div class="input-group mb-3"> 
+                    <input id="searchBar" type="text" class="form-control" placeholder="Enter city name here..." class="input-group-append">
+                    <button id="searchBtn" class="btn btn-primary" type="button" id="button"><i class="fas fa-search"></i></button>
                 </div>
-            </div>
-            
-        </div>
-    </div>
+                <div class="card">
+                    <ul class="list-group list-group-flush list"></ul>
+                </div> 
+                </div> 
+    
+            <div class="col-lg-9">
+                <div id="currentCity" class="mt-4"></div>
+            </div> 
+                
+        </div> 
+            <!-- 5 day forecast container -->
+        <div class="mt-4 col-md-12"> 
+            <h5 id="fivedaycast" class="hide">5-Day Forecast:</h5>
+            <div id="forecast" class="row"> </div> 
+              
+        </div> 
+    </div> 
+    
 </body>
 </html>
