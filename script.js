@@ -1,14 +1,17 @@
  var apiKey = "&appid=e36f2d6c975711e1482f564fe7b024f2";
 //var apiKey = "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c";
 var now = moment().format('dddd D MMMM YYYY ');
-//var cityName = $("#searchBar").val().trim();
+var cityName = "";//$("#searchBar").val().trim();
 //var queryForecast= "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + apiKey;
 
 $("#searchBtn").on("click",function() {
 
   function currentConditions() {
     // Gets the value of input
-    var cityName = $("#searchBar").val().trim();
+     cityName = $("#searchBar").val().trim();
+
+    // clear out the input box 
+    $("#searchBar").val("");
     // URL for API call
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + apiKey;
       
@@ -61,7 +64,7 @@ $("#searchBtn").on("click",function() {
             else if(uvIndex < 8){ uvColor = "orange";}
             else if(uvIndex < 11){ uvColor = "red";}
             else{ uvColor = "violet";}
-            var currentUv =$("<p>").text("UV: " + uvIndex).addClass("card-body").attr("style", "background-color:" + uvColor).attr("id","uvinfo");
+          var currentUv =$("<p>").text("UV: " + uvIndex).addClass("card-body").attr("style", "background-color:" + uvColor).attr("id","uvinfo");
            main.append(city, temperature, humidity, windSpeed,currentUv);
 
           })
@@ -71,13 +74,12 @@ $("#searchBtn").on("click",function() {
 
         }); 
     }
-      
+    
 
 
-
+ // Display 5 day forecast 
   $("#fivedaycast").addClass("show");
   console.log("This was a click.");
-  // Display 5 day forecast 
   function forecast () {
     var cityName = $("#searchBar").val().trim();
     var queryForecast= "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + apiKey;
@@ -113,23 +115,26 @@ $("#searchBtn").on("click",function() {
     })
 
   } 
+  //display list 
+function makeList() {
+  console.log("hurray")
+  var listItem = $("<li>").addClass("list-group-item").text(cityName);
+  $(".list").append(listItem);
+}
 
   currentConditions ();
   forecast();
+  makeList();
+ 
 
 });
-   
-
-
-      
 
 
 
 
+  
 
 
-
- 
 
 
 
