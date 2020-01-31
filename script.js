@@ -8,8 +8,6 @@ $("#searchBtn").on("click",function() {
     // Gets the value of input
      cityName = $("#searchBar").val().trim();
 
-    // clear out the input box 
-    //$("#searchBar").val("");
     // URL for API call
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + apiKey;
       
@@ -122,6 +120,9 @@ $("#searchBtn").on("click",function() {
   currentConditions ();
   forecast();
   makeList();
+
+   //clear out input box
+  $("#searchBar").val("");
  
 
 });
