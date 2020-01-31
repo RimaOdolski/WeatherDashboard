@@ -21,4 +21,3 @@ The Search button icon is from [Font Awesome](https://fontawesome.com/).
 
 
 ![Project Snippet ](Snippet.png)
-![Searched Cities](searchedcities.png)
