@@ -1,8 +1,6 @@
  var apiKey = "&appid=e36f2d6c975711e1482f564fe7b024f2";
-//var apiKey = "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c";
 var now = moment().format('dddd D MMMM YYYY ');
-var cityName = "";//$("#searchBar").val().trim();
-//var queryForecast= "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + apiKey;
+var cityName = "";
 
 $("#searchBtn").on("click",function() {
 
@@ -40,7 +38,6 @@ $("#searchBtn").on("click",function() {
         
          // APPEND TO DOM 
          city.append(icon, date);
-         //main.append(city, temperature, humidity, windSpeed);
          card.append(main);
          console.log()
          $("#currentCity").append(card);
@@ -116,11 +113,11 @@ $("#searchBtn").on("click",function() {
 
   } 
   //display list 
-function makeList() {
-  console.log("hurray")
+ function makeList() {
+  //console.log("called function")
   var listItem = $("<li>").addClass("list-group-item").text(cityName);
   $(".list").append(listItem);
-}
+ }
 
   currentConditions ();
   forecast();
