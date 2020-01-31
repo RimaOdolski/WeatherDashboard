@@ -20,5 +20,5 @@ This project uses [Bootstrap 4](https://getbootstrap.com/).
 The Search button icon is from [Font Awesome](https://fontawesome.com/).
 
 
-![Project Snippet ](projectsnippet.png)
+![Project Snippet ](Snippet.png)
 ![Searched Cities](searchedcities.png)

@@ -9,7 +9,7 @@ $("#searchBtn").on("click",function() {
      cityName = $("#searchBar").val().trim();
 
     // clear out the input box 
-    $("#searchBar").val("");
+    //$("#searchBar").val("");
     // URL for API call
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + apiKey;
       
@@ -39,7 +39,6 @@ $("#searchBtn").on("click",function() {
          // APPEND TO DOM 
          city.append(icon, date);
          card.append(main);
-         console.log()
          $("#currentCity").append(card);
   
 
@@ -76,9 +75,10 @@ $("#searchBtn").on("click",function() {
 
  // Display 5 day forecast 
   $("#fivedaycast").addClass("show");
-  console.log("This was a click.");
   function forecast () {
+    console.log("This was a click.");
     var cityName = $("#searchBar").val().trim();
+    console.log(cityName);
     var queryForecast= "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + apiKey;
     //console.log("This function was called.");
 
