@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-## You can see this project and test its features by visiting: 
+## You can see this project and test its features [here](https://rimaodolski.github.io/WeatherDashboard/)
 
 # User Story
  AS A traveler
@@ -21,3 +21,4 @@ The Search button icon is from [Font Awesome](https://fontawesome.com/).
 
 
 ![Project Snippet ](projectsnippet.png)
+![Searched Cities](searchedcities.png)
